@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enganchados RP</title>
+  <link rel="preload" href="./vendor/fonts/stylesheet.css" as="style">
+<link href="./vendor/fonts/stylesheet.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <div class="background-pattern"></div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Enganchados RP</h1>
+      <div class="nav-links">
+        <a href="/inicio/">Inicio</a>
+        <a href="/panel/">Panel</a>
+        <a href="/normativas/">Normativas</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+        <div id="steam-login-container">
+          <button id="login-btn" class="login-steam"><i class="fab fa-steam-symbol"></i> Iniciar Sesión</button>
+        </div>        
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-title-wrapper">
+    <div class="hero-title">
+      <h2><span>Somos</span></h2>
+      <h1>Enganchados Roleplay</h1>
+      <h2><span>Somos</span></h2>
+      <h1><span class="typewriter" id="type-text"></span></h1>
+    </div>
+  
+    <div class="hero-gallery-float">
+      <img src="https://i.pinimg.com/736x/0a/6c/0c/0a6c0cef5a5564237d540289d2d6a91f.jpg" alt="Imagen 1" class="float-img img-large">
+      <img src="https://i.pinimg.com/736x/b9/81/0d/b9810df04d4c340db117a4c6e36f72ee.jpg" alt="Imagen 2" class="float-img img-medium">
+      <img src="https://i.pinimg.com/1200x/d2/d8/52/d2d852163ad0bc41d19efad6be79d6ed.jpg" alt="Imagen 3" class="float-img img-small">
+    </div>
+  </section>    
+
+  <section class="hero-sub">
+    <p>Comunidad de RolePlay.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn primary-btn"> Ingresar al servidor <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a href="#" class="btn discord-btn"><i class="fab fa-discord"></i> Discord</a>
+    </div>
+  </section>  
+
+  <div class="info-panels-wrapper">
+    <div class="info-panels">
+      <div class="info-box">
+        <div class="info-header">
+          <i class="fas fa-store"></i>
+          <h3>Tienda exclusiva</h3>
+        </div>        
+        <p>Accede a productos unicos para el servidor.</p>
+      </div>
+      <div class="info-box">
+        <div class="info-header">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Seguridad garantizada</h3>
+        </div>        
+        <p>Todos los assets son verificados antes de ser publicados.</p>
+      </div>
+      <div class="info-box">
+        <div class="info-header">
+          <i class="fas fa-headset"></i>
+          <h3>Soporte activo</h3>
+        </div>        
+        <p>Atención personalizada para ayudarte con tus compras o dudas.</p>
+      </div>
+    </div>
+  </div>  
+
+  <section class="stats-title">
+    <h2>Estadísticas del Servidor</h2>
+    <p>Somos Comunidad</p>
+  </section>
+  
+  <div class="stats-panels-wrapper">
+    <div class="stats-panels">
+      <div class="stats-box">
+        <i class="fab fa-discord"></i>
+        <h3><span class="counter" data-target="100">0</span>+</h3>
+        <p>Miembros en discord</p>
+      </div>
+      
+      <div class="stats-box">
+        <i class="fas fa-users"></i>
+        <h3><span class="counter" data-target="25">0</span>+</h3>
+        <p>Clientes registrados</p>
+      </div>
+      
+      <div class="stats-box">
+        <i class="fas fa-star"></i>
+        <h3><span class="counter" data-target="20">0</span>+</h3>
+        <p>Ventas completadas</p>
+      </div>               
+  </div>  
+
+  <section class="team-title">
+    <div class="team-content">
+      <div class="team-heading-row">
+        <div class="team-text">
+          <h2>
+            <span>Conoce al</span><br />
+            equipo.
+          </h2>
+          <p>Detrás de cada venta hay personas comprometidas <br>con la calidad.</p>
+        </div>
+        <div class="team-inline-logo">
+          <img src="https://i.imgur.com/oFBKNJN.png" alt="Logo del equipo" onclick="window.open('https://discord.gg/gBKSSbt4HE', '_blank')">
+          <i class="fas fa-angle-right arrow-icon"></i>
+          <div class="logo-details">
+            <span class="logo-name">Lussop y Benja<span class="badge-ceo"> CEO's.</span></span>
+            <div class="logo-buttons">
+ 
+            </div>
+          </div>
+        </div>                                        
+      </div>
+    </div>       
+  </section>   
+
+  
+
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <section class="footer-end">
+    <p>&copy; 2025 Enganchados Roleplay<br></span></p>
+  </section>   
+
+  <script>
+
+    // Tema claro/oscuro + icono dinámico
+    const toggleBtn = document.getElementById("theme-toggle");
+    const icon = toggleBtn.querySelector("i");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      icon.style.transform = 'rotate(360deg)';
+      setTimeout(() => icon.style.transform = 'rotate(0deg)', 300);
+      icon.classList.toggle("fa-moon");
+      icon.classList.toggle("fa-sun");
+    });
+    
+  </script>
+  <script>
+    const words = ["Enganchados.", "Únicos.", "Exclusivos."];
+    const typewriter = document.getElementById("type-text");
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+  
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      const currentText = currentWord.substring(0, charIndex);
+      typewriter.textContent = currentText;
+  
+      if (!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(typeEffect, 120);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeEffect, 60);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+        setTimeout(typeEffect, 600);
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(typeEffect, 600); // Delay para sincronizar con animaciones
+    });
+  </script>  
+<script>
+  const statBoxes = document.querySelectorAll('.stats-box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  statBoxes.forEach(box => observer.observe(box));
+</script>
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+<script>
+  const statBoxes2 = document.querySelectorAll('.stats-box');
+  let hasCounted = false;
+
+  const observe2r = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasCounted) {
+        entry.target.classList.add('visible');
+
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
+
+          const updateCounter = () => {
+            const increment = Math.ceil(target / 40);
+            if (count < target) {
+              count += increment;
+              counter.innerText = count;
+              setTimeout(updateCounter, 30);
+            } else {
+              counter.innerText = target;
+            }
+          };
+
+          updateCounter();
+        });
+
+        hasCounted = true;
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  statBoxes2.forEach(box => observe2r.observe(box));
+</script>
+<script>
+  fetch('/session')
+    .then(res => res.json())
+    .then(user => {
+      if (user.name && user.avatar) {
+        document.getElementById('steam-login-container').innerHTML = `
+          <div class="steam-user-wrapper">
+            <div class="steam-user" id="steam-user">
+              <img src="${user.avatar}" alt="Avatar Steam" class="steam-avatar">
+              <span>${user.name}</span>
+            </div>
+            <div class="panel-dropdown" id="panel-dropdown">
+              <i class="fa-solid fa-user" style="margin: 0;"> </i>
+            </div>
+            <div class="logout-dropdown" id="logout-dropdown">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+          </div>
+        `;
+
+        // ELEMENTOS
+        const steamUser = document.getElementById("steam-user");
+        const logoutDropdown = document.getElementById("logout-dropdown");
+        const panelDropdown = document.getElementById("panel-dropdown");
+
+        // MOSTRAR ambos con el mismo clic
+        steamUser.addEventListener("click", () => {
+          logoutDropdown.classList.toggle("show");
+          panelDropdown.classList.toggle("show");
+        });
+
+        // ACCIÓN: redireccionar
+        logoutDropdown.addEventListener("click", () => {
+          window.location.href = "/logout";
+        });
+
+        panelDropdown.addEventListener("click", () => {
+          window.location.href = "/panel/";
+        });
+
+        // OCULTAR si clickeás fuera
+        document.addEventListener("click", (e) => {
+          if (!steamUser.contains(e.target)) {
+            logoutDropdown.classList.remove("show");
+            panelDropdown.classList.remove("show");
+          }
+        });
+      }
+    });
+
+  document.getElementById('login-btn')?.addEventListener('click', () => {
+    window.location.href = '/auth/steam';
+  });
+</script>
+
+</body>
+</html>
